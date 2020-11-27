@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  def index
-
+  def show
+    @profile = Profile.find(params[:id])
   end
 end
