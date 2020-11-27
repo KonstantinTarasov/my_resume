@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Profile.find_or_create_by(
-    name: "Константин", surname: "Тарасов", experience: "6 месяцев", salary: "40 000",
+    name: "Константин", surname: "Тарасов", experience: "6 месяцев", salary: 40000,
     telegram: "@Tarasov_Konstantin")

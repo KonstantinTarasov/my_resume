@@ -1,1 +1,62 @@
-= @profile.name
+
+
+doctype html
+html lang=I18n.locale
+  head
+    meta charset=Rails.application.config.encoding
+    = stylesheet_link_tag 'application', media: 'all'
+  body.vacancy-body
+    #main-wrap
+      section.wrap.holder style="margin-top: 30px; margin-bottom: 30px;"
+
+        .h1-title Отлик на вакансию «BackEnd RoR разработчик»
+        .b-appeal.vacancy-b-appeal
+          .b-appeal-img = image_tag "/my_resume/app/assets/images/Фото.jpg"
+          .b-appeal-desc
+            .b-appeal--name = @profile.name
+            .b-appeal--post
+              p
+                ' Стаж разработки:
+                b = @profile.experience
+              p
+            .b-appeal--text
+              p
+                ' Желаемая зп:
+                b = @profile.salary
+              p
+                ' E-mail:
+                b = mail_to "gardgarda@yandex.ru"
+              p
+                ' Telegram:
+                b "@Tarasov_Kostantin"
+              p
+
+        .h2-title.vacancy-title
+          ' Навыки
+          small (отметить нужное или дополнить)
+
+        = form_for "form_name", method: :get, url: "#", html: {class: "b-form", id: "b-form-1"} do |f|
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'RoR'), OpenStruct.new(val: 'jQuery'), OpenStruct.new(val: 'bootstrap')], :val, :val, {}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'windows'), OpenStruct.new(val: 'linux'), OpenStruct.new(val: 'mac os')], :val, :val, {}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'RubyMine'), OpenStruct.new(val: 'SubLime'), OpenStruct.new(val: 'brackets')], :val, :val, {}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'PostgreSQL'), OpenStruct.new(val: 'SQLite')], :val, :val, {}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'html'), OpenStruct.new(val: 'erb')], :val, :val, {}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'css'), OpenStruct.new(val: 'scss')], :val, :val, {}, {class: "f-field-check"}
+
+
+
+        article.content
+          h2.vacancy-title Дополнительная информация
+          p Оброзавание - Уфимский Государственный Авиационный Технический Университет
+          pre
+            code
+              ' puts 'Hello, world!'
+
+          p.code-hint Пример моего кода.
+
