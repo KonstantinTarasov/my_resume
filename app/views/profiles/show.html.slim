@@ -14,9 +14,6 @@
               p
             .b-appeal--text
               p
-                ' Желаемая зп:
-                b = @profile.salary
-              p
                 ' E-mail:
                 b = mail_to "gardgarda@yandex.ru"
               p
@@ -34,8 +31,6 @@
             .vacancy-checkbox
               = f.collection_check_boxes k, v, :first, :first do |cb|
                 = cb.label { cb.check_box(checked: v[cb.text]) + cb.text }
-
-
 
         article.content
           h2.vacancy-title Дополнительная информация

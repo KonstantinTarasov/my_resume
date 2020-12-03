@@ -5,9 +5,10 @@ class InvitationMailer < ApplicationMailer
   #
   #   en.invitation_mailer.profile.subject
   #
-  def profile(mail)
+  def profile(email)
     @greeting = "Привет!"
+    @email = email
 
-    mail to: @mail
+    mail to: @email
   end
 end
