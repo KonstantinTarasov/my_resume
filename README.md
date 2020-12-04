@@ -20,7 +20,7 @@
 
 ### Приложение на Heroku
 
-[Мое резюме](https://resume-tarasov.herokuapp.com/profiles/2)
+[Мое резюме](https://resume-tarasov.herokuapp.com/profiles/3)
 
 Отправка сообщения:
 
