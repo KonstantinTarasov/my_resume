@@ -15,11 +15,13 @@
 
  @import "normalize";
 
- *= require fonts
- *= require basis
- *= require base_blocks
- *= require print
- *= require content
- *= require vacancy
+ @import fonts
+ @import basis
+ @import base_blocks
+ @import print
+ @import content
+ @import vacancy
+ @import mixins
+ @import profiles
 
  */

@@ -9,6 +9,6 @@ class InvitationMailer < ApplicationMailer
     @greeting = "Привет!"
     @email = email
 
-    mail to: @email
+    mail to: @email, subject: 'Ссылка на резюме'
   end
 end
