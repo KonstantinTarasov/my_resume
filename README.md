@@ -24,5 +24,4 @@
 
 Отправка сообщения:
 
-* heroku run rails c
-* InvitationMailer.profile("Почта куда отправляете").deliver_now
+* heroku run rake send:message email=почта куда отправляете
