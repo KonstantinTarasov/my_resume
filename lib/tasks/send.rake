@@ -1,7 +1,7 @@
 namespace :send do
   desc "Отправка сообщения"
   task message: :environment do
-    puts "Сообщение отправлено"
-    InvitationMailer.profile("Почта куда отправляете").deliver_now
+    InvitationMailer.profile(ENV['email']).deliver_now
+    puts "Сообщение отправлено!"
   end
 end
