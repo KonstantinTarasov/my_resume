@@ -16,7 +16,7 @@
 * yarn install
 * rake db:migrate
 * rails s
-* 0.0.0.0:3000
+* 0.0.0.0:3000/profiles/7
 
 ### Приложение на Heroku
 
